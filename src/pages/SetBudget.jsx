@@ -16,7 +16,7 @@ function SetBudget() {
     e.preventDefault();
     for (let cat of categories) {
       if (budgets[cat]) {
-        await axios.post(`${process.env.REACT_URL}/budgets`, {
+        await axios.post(`${process.env.REACT_APP_URL}/budgets`, {
           category: cat,
           amount: Number(budgets[cat]),
           month

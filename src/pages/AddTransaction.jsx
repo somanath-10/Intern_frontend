@@ -13,7 +13,7 @@ function AddTransaction() {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    await axios.post(`${process.env.REACT_URL}/transactions`, form);
+    await axios.post(`${process.env.REACT_APP_URL}/transactions`, form);
     alert('Transaction added!');
     setForm({ amount: '', description: '', date: '', category: '' });
   };

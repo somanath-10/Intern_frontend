@@ -19,12 +19,13 @@ const Dashboard = () => {
 
   useEffect(() => {
     const fetchTransactions = async () => {
-      const res = await axios.get(`${process.env.REACT_URL}/transactions`);
+      console.log("react",process.env.REACT_APP_URL)
+      const res = await axios.get(`${process.env.REACT_APP_URL}/transactions`);
       setTransactions(res.data);
     };
 
     const fetchBudgets = async () => {
-      const res = await axios.get(`${process.env.REACT_URL}/budgets/${month}`);
+      const res = await axios.get(`${process.env.REACT_APP_URL}/budgets/${month}`);
       setBudgets(res.data);
     };
 
