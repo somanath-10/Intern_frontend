@@ -19,12 +19,12 @@ const Dashboard = () => {
 
   useEffect(() => {
     const fetchTransactions = async () => {
-      const res = await axios.get('http://localhost:5000/api/transactions');
+      const res = await axios.get(`${process.env.REACT_URL}/transactions`);
       setTransactions(res.data);
     };
 
     const fetchBudgets = async () => {
-      const res = await axios.get(`http://localhost:5000/api/budgets/${month}`);
+      const res = await axios.get(`${process.env.REACT_URL}/budgets/${month}`);
       setBudgets(res.data);
     };
 
